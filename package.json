@@ -1,0 +1,26 @@
+{
+  "name": "deel-task",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "seed": "node ./scripts/seedDb.js",
+    "test": "mocha deel-api/tests/apiTest.js --timeout 5000",
+    "docker:build": "docker-compose build",
+    "docker:bash": "docker-compose up",
+    "dev": "concurrently \"npm run server\" \"npm run app\"",
+    "server": "cd deel-api && npm start",
+    "app": "cd deel-app && npm start"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "concurrently": "^8.0.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=10.16.3"
+  },
+  "engineStrict": true
+}
