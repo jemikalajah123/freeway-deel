@@ -19,12 +19,10 @@ RUN yarn
 # add app to root directory
 COPY . .
 
-RUN yarn build
-
 # Map a volume for the log files and add a volume to override the code
 VOLUME ["/app", "/var/log/applications/applogs"]
 
 # Expose app port
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["yarn", "dev"]
