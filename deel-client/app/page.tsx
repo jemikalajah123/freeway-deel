@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col p-4 lg:px-24 lg:py-12">
       <div className="w-full items-center justify-between font-mono text-sm flex pb-4 lg:pb-8">
-        <div className="flex justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black static h-auto w-auto">
+        <div className="flex justify-center bg-gradient-to-t from-white via-white dark:from-black static h-auto w-auto">
           <span className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto">
             By <span className="font-semibold text-2xl">DEEL</span>
           </span>

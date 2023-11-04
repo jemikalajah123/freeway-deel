@@ -28,23 +28,7 @@ There is an API documentation built with postman to assist you on understanding 
 
 First, run the development server:
 
-❗️ **You need docker installed.**
-
-### Running the backend service in docker
-
-```bash
-cd deel-api && npm run docker:bash
-```
-from the root directory.
-
-### Running the Frontend service in docker
-
-```bash
-cd deel-client && npm run docker:bash
-```
-from the root directory.
-
-### Running locally (CLient and Server Side)
+### Running locally (Client and Server Side)
 
 ❗️ **You need the lates node version installed ( >= v18.18.2) because of the next js app**
 
@@ -53,10 +37,33 @@ Run the command below to build and start the application
 ```bash
 npm install
 ```
+from the root directory.
+
 
 ```bash
 npm run setup-server && npm run setup-client && npm run dev
 ```
+from the root directory.
+
+### Running in docker
+❗️ **You need docker installed.**
+
+- Running the backend service in docker, copy and run the ccommand below
+
+```bash
+cd deel-api && npm run docker:bash
+```
+from the root directory.
+
+-  Running the Frontend service in docker, copy and run the ccommand below
+
+```bash
+cd deel-client && npm run docker:bash
+```
+from the root directory.
+
+### View the application
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to view the contractor and client landing page.
 
 Open [http://localhost:3000/admin](http://localhost:3000/admin) with your browser to view the admin dashboard.
