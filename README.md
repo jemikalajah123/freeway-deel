@@ -30,11 +30,19 @@ First, run the development server:
 
 ❗️ **You need docker installed.**
 
-### Running in docker
+### Running the backend service in docker
 
 ```bash
-npm run docker:bash
+cd deel-api && npm run docker:bash
 ```
+from the root directory.
+
+### Running the Frontend service in docker
+
+```bash
+cd deel-client && npm run docker:bash
+```
+from the root directory.
 
 ### Running locally (CLient and Server Side)
 

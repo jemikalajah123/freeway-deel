@@ -1,5 +1,5 @@
 # Use the predefined node base image for this application.
-FROM node:16.0.0-alpine
+FROM node:20.9.0-alpine
 # Creating base "app" directory where the source repo will reside in our container.
 # Code is copied from the host machine to this "app" folder in the container as a last step.
 

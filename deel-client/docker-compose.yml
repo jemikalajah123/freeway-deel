@@ -1,0 +1,21 @@
+version: "3"
+services:
+  app:
+    container_name: web_customer
+    image: web_customer
+    build: .
+    networks:
+      - main_network
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: yarn run dev
+
+volumes:
+  node_modules:
+
+networks:
+  main_network:
+    driver: bridge

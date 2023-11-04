@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:bash": "docker-compose -p web_customer run --service-ports app"
   },
   "dependencies": {
     "axios": "^1.6.0",
