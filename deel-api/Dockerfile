@@ -13,7 +13,6 @@ RUN npm install
 # add app to root directory
 COPY . .
 
-RUN npm run seed
 
 # Start the app
 CMD ["npm", "start"]

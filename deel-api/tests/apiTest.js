@@ -30,9 +30,9 @@ describe('Contract APIs', () => {
         .set('profile_id', `${testProfile.id}`);
 
       expect(res.status).to.equal(200);
-      expect(res.body).to.have.property('id');
-      expect(res.body.ClientId).to.equal(testProfile.id);
-      expect(res.body.ContractorId).to.equal(2);
+      expect(res.body.data).to.have.property('id');
+      expect(res.body.data.ClientId).to.equal(testProfile.id);
+      expect(res.body.data.ContractorId).to.equal(2);
     });
   });
 
@@ -46,8 +46,8 @@ describe('Contract APIs', () => {
         .set('profile_id', `${testProfile.id}`);
 
       expect(res.status).to.equal(200);
-      expect(res.body).to.be.an('array');
-      expect(res.body.length).to.be.greaterThan(0);
+      expect(res.body.data).to.be.an('array');
+      expect(res.body.data.length).to.be.greaterThan(0);
     });
   });
 
@@ -67,8 +67,8 @@ describe('Contract APIs', () => {
         .set('profile_id', `${testProfile.id}`);
 
       expect(res.status).to.equal(200);
-      expect(res.body).to.be.an('array');
-    //   expect(res.body.length).to.be.greaterThan(0);
+      expect(res.body.data).to.be.an('array');
+      expect(res.body.data.length).to.be.greaterThan(0);
     });
   });
 });
@@ -155,7 +155,7 @@ describe('Payment APIs', () => {
         .send({ amount: depositAmount });
 
       expect(res.status).to.equal(400);
-      expect(res.body).to.have.property('error', 'Deposit exceeds the limit');
+      expect(res.body).to.have.property('message', 'Deposit exceeds the limit');
     });
   });
 });
@@ -195,7 +195,7 @@ describe('Admin APIs', () => {
         .query({ start: "2023-08-08", end: new Date() });
 
       expect(res.status).to.equal(200);
-      expect(res.body).to.have.property('profession', 'Programmer');
+      expect(res.body.data).to.have.property('profession', 'Programmer');
     });
   });
 
@@ -233,8 +233,8 @@ describe('Admin APIs', () => {
         .query({ start: "2023-08-08", end: new Date() });
 
       expect(res.status).to.equal(200);
-      expect(res.body).to.be.an('array');
-      expect(res.body.length).to.be.greaterThan(1);
+      expect(res.body.data).to.be.an('array');
+      expect(res.body.data.length).to.be.greaterThan(1);
     });
   });
 });
