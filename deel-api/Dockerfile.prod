@@ -1,5 +1,5 @@
 # Use the predefined node base image for this application.
-FROM node:latest
+FROM node:20.9.0
 
 WORKDIR '/app'
 
