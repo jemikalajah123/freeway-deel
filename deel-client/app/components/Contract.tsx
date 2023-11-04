@@ -9,10 +9,10 @@ import { getContractById } from "../lib/actions";
 const Contract = ({ contract, profileId }: { contract: ContractModel; profileId: string }) => {
   const [id, setId] = useState<number | null>(null);
 
-  const { mutateAsync, isLoading, data: contracts } = useMutation(getContractById);
+  const { mutate, isLoading, data: contracts } = useMutation(getContractById);
 
   const handleSelectContract = () => {
-    mutateAsync({ id: contract.id, profileId });
+    mutate({ id: contract.id, profileId });
     setId(contract.id);
   };
 

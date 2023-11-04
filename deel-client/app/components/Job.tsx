@@ -15,7 +15,7 @@ const Job = ({ job, profileId, refetchJobs }: { job: JobModel; profileId: string
 
   const queryClient = new QueryClient();
 
-  const { mutateAsync, isLoading } = useMutation(PayForJob, {
+  const { mutate, isLoading } = useMutation(PayForJob, {
     onSuccess: () => {
       toast("Payment successful!...");
       refetchJobs(profileId);
@@ -44,7 +44,7 @@ const Job = ({ job, profileId, refetchJobs }: { job: JobModel; profileId: string
     setFailedToPay("");
 
     if (id) {
-      mutateAsync({ id, profileId })
+      mutate({ id, profileId })
     }
   };
 
