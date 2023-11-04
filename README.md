@@ -60,6 +60,8 @@ Open [http://localhost:3001](http://localhost:3001) with your postman or api tes
 Test cases for the various apis exist inside apiTest.js in the "Tests" folder, run the test with the following command;
 Run `cd deel-api && npm run test` from the root directory.
 
-### Recommendation/Improvements
+### Recommendation/Improvements (With more time)
 
-Write more test cases
+- Write more robust test cases for the backend api and include test cases for the fronted UI.
+
+- Write deployment scripts and Configure a ci-cd pipeline using github actions to deploy to AWS EKS for the frontend , just like the backend.
